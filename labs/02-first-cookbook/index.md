@@ -42,6 +42,27 @@ workstation
 
 As we discussed during the lecture these files all have a specific purpose, but we are going to focus on the `recipes` directory for now. 
 
+Create your new `setup.rb` file: 
+
+* Install ntp and tree packages
+* Create `/etc/motd` with:
+
+```
+'This server is property of ...'
+```
+
+Start and enable the `ntp` service. 
+
+Run the new `setup.rb` to confirm it works. 
+```bash
+sudo chef-client -z setup.rb
+```
+
+Check the `/etc/motd` was updated. 
+
+Now we are going to migrate this file to our new cookbook.
+
+
 Copy the `setup.rb` file to the new `workstation/recipes` directory. 
 ```bash
 cp $HOME/chef/recipes/setup.rb $HOME/chef/cookbooks/workstation/recipes/
