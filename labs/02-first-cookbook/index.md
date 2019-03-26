@@ -157,17 +157,21 @@ Now let's interact directly with cookbooks instead of providing a path to a reci
 
 We have a workstation we would like to setup, it must have: 
 Installed packages: 
-	* Git 
-	* tree
-	* ntp 
+
+* Git 
+* tree
+* ntp 
 
 File content: 
-	* The file `/etc/motd` must have the text "This server is being managed by Chef"
+
+* The file `/etc/motd` must have the text "This server is being managed by Chef"
 
 Service:
-	* The `ntp` service must be started and enabled to start-on-boot. 
+
+* The `ntp` service must be started and enabled to start-on-boot. 
 
 The workstation will also be a web server and requires: 
+
 * Apache
 * `/var/www/html/index.html`
 	* with content: 
