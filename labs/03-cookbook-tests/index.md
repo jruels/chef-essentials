@@ -6,7 +6,7 @@ We will be using `Docker` as our `driver` with Test Kitchen which means that the
 
 We need to install `docker` because we are already using a `Vagrant` VM and cannot nest virtualization. 
 ```bash
-curl -fsSL get.docker.com -o | sudo bash -s
+curl -fsSL get.docker.com -o - | sudo bash -s
 sudo adduser vagrant docker
 ```
 
