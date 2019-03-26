@@ -10,6 +10,11 @@ curl -fsSL get.docker.com -o - | sudo bash -s
 sudo adduser vagrant docker
 ```
 
+Install the `docker` Test Kitchen gem
+```
+chef gem install kitchen-docker
+```
+
 Now to refresh group ownership you need to log out of the Vagrant VM and then log back in. 
 ```
 exit
