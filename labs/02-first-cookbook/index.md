@@ -14,29 +14,44 @@ chef generate cookbook workstation
 
 This cookbook will be used to setup your workstation, take a look at the directories and files that were created. 
 ```bash
-tree workstation
+ls -1R workstation
 ```
 
 You should see something like: 
 ```bash
-workstation
-├── Berksfile
-├── CHANGELOG.md
-├── chefignore
-├── LICENSE
-├── metadata.rb
-├── README.md
-├── recipes
-│   └── default.rb
-├── spec
-│   ├── spec_helper.rb
-│   └── unit
-│       └── recipes
-│           └── default_spec.rb
-└── test
-    └── integration
-        └── default
-            └── default_test.rb
+workstation/:
+Berksfile
+CHANGELOG.md
+chefignore
+LICENSE
+metadata.rb
+README.md
+recipes
+spec
+test
+
+workstation/recipes:
+default.rb
+setup.rb
+
+workstation/spec:
+spec_helper.rb
+unit
+
+workstation/spec/unit:
+recipes
+
+workstation/spec/unit/recipes:
+default_spec.rb
+
+workstation/test:
+integration
+
+workstation/test/integration:
+default
+
+workstation/test/integration/default:
+default_test.rb
 ```
 
 
