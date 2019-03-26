@@ -4,6 +4,12 @@ In this lab you will write tests to confirm your chef runs are successful.
 
 We will be using `Docker` as our `driver` with Test Kitchen which means that the `Ubuntu` image we are going to use for our base will be minimal and will not have all the packages required for running our tests.
 
+We need to install `docker` to because we are already using a `Vagrant` VM and cannot nest virtualization. 
+```bash
+curl -fsSL get.docker.com -o | sudo bash -s
+sudo adduser vagrant docker
+```
+
 To run our port test we need to have the `net-tools` package installed.  Since we are using Chef, go ahead and update the `apache` cookbook `server` recipe to install the `net-tools` package.
 
 ## Test Kitchen Configuration 
