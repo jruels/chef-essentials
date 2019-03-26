@@ -4,6 +4,8 @@ This page provides attendees of Chef Essentials class access to slides and labs.
 
 ## [Course Content](http://bit.ly/chef-essentials-slides)
 
+[Student VMs](https://docs.google.com/spreadsheets/d/1OCU-pG-2col7z6OSHSIy2ayZ-i5ntml7YJSqQPYREJo/edit?usp=sharing)
+
 
 ## Labs
 
