@@ -44,7 +44,7 @@ As we discussed during the lecture these files all have a specific purpose, but 
 
 Copy the `setup.rb` file to the new `workstation/recipes` directory. 
 ```bash
-cp $HOME/chef/recipes/setup.rb $HOME/chef/cookbooks/recipes/
+cp $HOME/chef/recipes/setup.rb $HOME/chef/cookbooks/workstation/recipes/
 ```
 
 Now you should have two files in `recipes` directory. 
