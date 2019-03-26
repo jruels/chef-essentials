@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.define "chefdk" do |chefdk|
+    chefdk.vm.box = "bento/ubuntu-18.04"
+    chefdk.vm.hostname = "chefdk.example.lab"
+    chefdk.vm.network "private_network", ip: "172.31.0.201"
+    #  virtualbox__intnet: true
+
+    chefdk.vm.provider :virtualbox do |v|
+     v.customize ["modifyvm", :id, "--memory", 2048]
+    end
+  end
+config.vm.provision "shell", inline: <<-SHELL
+     export DEBIAN_FRONTEND=noninteractive
+     apt-get update
+     apt-get install -y curl vim-nox git
+     curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable
+   SHELL
+end
