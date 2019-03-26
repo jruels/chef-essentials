@@ -10,6 +10,11 @@ curl -fsSL get.docker.com -o - | sudo bash -s
 sudo adduser vagrant docker
 ```
 
+Now to refresh group ownership you need to log out of the Vagrant VM and then log back in. 
+```
+exit
+```
+
 To run our port test we need to have the `net-tools` package installed.  Since we are using Chef, go ahead and update the `apache` cookbook `server` recipe to install the `net-tools` package.
 
 ## Test Kitchen Configuration 
