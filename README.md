@@ -26,6 +26,7 @@ Lab 9: [Add additional web node](labs/09-add-node)
 Lab 10: [Applying roles](labs/10-roles)  
 Lab 11: [Using search](labs/11-search)  
 Lab 12: [Creating environments](labs/12-environments)  
+Lab 13: [Data bags](labs/13-data-bags)  
 
 
 
