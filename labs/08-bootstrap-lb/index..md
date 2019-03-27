@@ -1,4 +1,4 @@
-# Bootstrap Load Balancer 
+# Bootstrap Load Balancer lab
 
 In this lab you will use `Berkshelf` to upload the `haproxy` cookbook with all it's dependencies to the Chef Server.   After uploading the cookbooks you will bootstrap the load balancer node with the `myhaproxy` cookbook. 
 
