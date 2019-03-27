@@ -18,4 +18,20 @@ Lab 3: [Testing Cookbooks](labs/03-cookbook-tests/)
 Lab 4: [Node data attributes](labs/04-ohai/)  
 Lab 5: [Templates](labs/05-templates/)  
 
+### Day 2 
+Lab 6: [Host Chef](labs/06-chef-server)
+Lab 7: [Bootstrap nodes](labs/07-bootstrap-node)
+Lab 8: [Bootstrap Load Balancer](labs/08-bootstrap-lb)
+Lab 9: [Add additional web node](labs/09-add-node)
+Lab 10: [Applying roles](labs/10-roles)
+Lab 11: [Using search](labs/11-search)
+Lab 12: [Creating environments](labs/12-environments)
 
+
+06-chef-server
+07-bootstrap-node
+08-bootstrap-lb
+09-add-node
+10-roles
+11-search
+12-environments
