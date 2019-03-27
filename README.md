@@ -1,4 +1,4 @@
-# Chef Essentials 
+# Chef Essentials classpage
 
 This page provides attendees of Chef Essentials class access to slides and labs. 
 
