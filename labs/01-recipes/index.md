@@ -1,6 +1,6 @@
 # Getting familiar with Recipes
 
-In this lab you are going to write your first recipe, and then tweak it a little so you can see how `chef-client` works.   You will also create a more complex recipe to install and configure a web server. 
+In this lab you are going to write your first recipe, and then tweak it a little so you can see how `chef-client` works.   You will also create a more complex recipe to install a couple packages and populate the `motd` 
 
 ## Your first recipe
 Your first recipe is very simple and is the classic `hello world` that we all love.  
@@ -70,11 +70,15 @@ Change the content of `hello.txt` and re-run `chef-client` .
 
 What happened? 
 
-## Install Web Server
-Now using the following resources write your own recipe that installs and configures a web server. 
+## Multi-resource recipe
+Now using the following resources:
 * Package
 * File
 * Service
+
+Write your own recipe `setup.rb` that installs the `tree` and `ntp` packages, and populates `/etc/motd` with "This server is the property of..." 
+
+We also want `ntp` service to run, and be enabled if the server reboots. 
 
 If you need to refer back to the slides go ahead, but the recommended approach is to play around a bit and if you are stumped ask the instructor for assistance. 
 
