@@ -7,7 +7,7 @@ As discussed we will be using `Vagrant` to spin up the new nodes we will be boot
 
 Copy the `Vagrantfile` from `lab07/files` directory to `chef-repo`
 ```bash
-cp lab07/files/Vagrantfile ~/chef-repo/.
+cp 07-bootstrap-node/files/Vagrantfile ~/chef-repo/.
 ```
 
 Now enter the directory
