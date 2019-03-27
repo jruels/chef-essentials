@@ -4,7 +4,7 @@ In this lab you will use `Berkshelf` to upload the `haproxy` cookbook with all i
 
 Generate our new `myhaproxy` cookbook
 ```bash
-chef generate cookbooks/myhaproxy
+chef generate cookbook cookbooks/myhaproxy
 ```
 
 Add dependency to `myhaproxy ` `metadata.rb`
