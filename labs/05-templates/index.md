@@ -51,10 +51,10 @@ Now that you've successfully refactored the `setup.rb` recipe to use `template` 
 ## Template variables 
 Let's play around with defining variables in recipes that we can then use in our templates to populate our files. 
 
-Update the `server.rb` recipe with the following variables 
+Update the `server.rb` recipe with the following variables, remember to put your dream car.
 ```ruby
 variables(
-   :name => 'Jason'
+   :name => 'Jason',
    :dreamcar  => '<your dream car>'
  )
 ```
