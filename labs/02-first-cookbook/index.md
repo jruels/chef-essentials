@@ -14,69 +14,33 @@ chef generate cookbook workstation
 
 This cookbook will be used to setup your workstation, take a look at the directories and files that were created. 
 ```bash
-ls -1R workstation
+tree workstation
 ```
 
 You should see something like: 
 ```bash
-workstation/:
-Berksfile
-CHANGELOG.md
-chefignore
-LICENSE
-metadata.rb
-README.md
-recipes
-spec
-test
-
-workstation/recipes:
-default.rb
-setup.rb
-
-workstation/spec:
-spec_helper.rb
-unit
-
-workstation/spec/unit:
-recipes
-
-workstation/spec/unit/recipes:
-default_spec.rb
-
-workstation/test:
-integration
-
-workstation/test/integration:
-default
-
-workstation/test/integration/default:
-default_test.rb
+workstation
+├── Berksfile
+├── CHANGELOG.md
+├── chefignore
+├── LICENSE
+├── metadata.rb
+├── README.md
+├── recipes
+│   └── default.rb
+├── spec
+│   ├── spec_helper.rb
+│   └── unit
+│       └── recipes
+│           └── default_spec.rb
+└── test
+    └── integration
+        └── default
+            └── default_test.rb
 ```
 
 
 As we discussed during the lecture these files all have a specific purpose, but we are going to focus on the `recipes` directory for now. 
-
-Create your new `setup.rb` file: 
-
-* Install ntp and tree packages
-* Create `/etc/motd` with:
-
-```
-'This server is property of ...'
-```
-
-Start and enable the `ntp` service. 
-
-Run the new `setup.rb` to confirm it works. 
-```bash
-sudo chef-client -z setup.rb
-```
-
-Check the `/etc/motd` was updated. 
-
-Now we are going to migrate this file to our new cookbook.
-
 
 Copy the `setup.rb` file to the new `workstation/recipes` directory. 
 ```bash
@@ -193,25 +157,20 @@ Now let's interact directly with cookbooks instead of providing a path to a reci
 
 We have a workstation we would like to setup, it must have: 
 Installed packages: 
-
-* Git 
-* tree
-* ntp 
+	* Git 
+	* tree
+	* ntp 
 
 File content: 
-
-* The file `/etc/motd` must have the text "This server is being managed by Chef"
+	* The file `/etc/motd` must have the text "This server is being managed by Chef"
 
 Service:
-
-* The `ntp` service must be started and enabled to start-on-boot. 
+	* The `ntp` service must be started and enabled to start-on-boot. 
 
 The workstation will also be a web server and requires: 
-
 * Apache
 * `/var/www/html/index.html`
 	* with content: 
-
 ```html
 <h1>Hello, world!</h1>
 ```
@@ -248,6 +207,11 @@ As you can see the `default` recipe called the `setup` recipe.
 
 
 Now we are going to create an Apache cookbook that can be used to install and configure a web server. 
+
+We need to run the `chef generate` command from the `chef` directory. 
+```bash
+cd $HOME/chef
+```
 
 Use `chef generate` to create the new cookbook. 
 ```bash
