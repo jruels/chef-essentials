@@ -45,9 +45,10 @@ You should see something similar to:
 Now update the recipe so that it is owned by `root:root` and is only readable by the `root` user. 
 
 Add the following to `hello.rb` 
+
 ```ruby
   owner 'root'
-	group 'root'
+  group 'root'
   mode   0600
 ```
 
